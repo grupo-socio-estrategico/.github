@@ -1,0 +1,56 @@
+name: Requerimiento
+description: Solicitar una funcionalidad o un cambio en un componente de GSE.
+title: "[Requerimiento] "
+projects: ["grupo-socio-estrategico/4"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **No incluyas** cédulas, contraseñas, datos personales de trabajadores ni ubicaciones exactas de operación.
+  - type: dropdown
+    id: componente
+    attributes:
+      label: Componente
+      options:
+        - Sistema
+        - App de seguimiento
+        - Nómina
+        - Web
+        - Conocimiento
+        - No estoy seguro
+    validations:
+      required: true
+  - type: input
+    id: solicitante
+    attributes:
+      label: ¿Quién lo solicita?
+      description: Área o rol (Gerencia, Nómina, Operaciones, Cliente…).
+    validations:
+      required: true
+  - type: textarea
+    id: necesidad
+    attributes:
+      label: ¿Qué se necesita?
+      description: Describe el problema o la necesidad, no la solución técnica.
+    validations:
+      required: true
+  - type: textarea
+    id: beneficio
+    attributes:
+      label: ¿Para qué? (beneficio esperado)
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: ¿Cómo sabremos que quedó bien? Una condición por línea.
+      placeholder: "- Dado … cuando … entonces …"
+  - type: dropdown
+    id: urgencia
+    attributes:
+      label: Urgencia sugerida
+      options: [Alta, Media, Baja]
+  - type: textarea
+    id: adjuntos
+    attributes:
+      label: Adjuntos o referencias
+      description: Diagramas, capturas o documentos, sin datos personales.

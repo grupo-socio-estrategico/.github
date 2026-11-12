@@ -1,0 +1,23 @@
+name: Error
+description: Reportar algo que no funciona como debería.
+title: "[Error] "
+projects: ["grupo-socio-estrategico/4"]
+body:
+  - type: dropdown
+    id: componente
+    attributes:
+      label: Componente
+      options: [Sistema, App de seguimiento, Nómina, Web, No estoy seguro]
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: ¿Qué hiciste y qué pasó?
+      description: Pasos para reproducirlo, sin datos personales.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: ¿Qué esperabas que pasara?
